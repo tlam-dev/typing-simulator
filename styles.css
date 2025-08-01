@@ -238,6 +238,9 @@ h1 {
     opacity: 1;
 }
 
+#repo {
+    text-decoration: none;
+}
 
 #repo-link {
     cursor: pointer;
