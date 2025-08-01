@@ -1,7 +1,7 @@
 # AI-style Typing Effect Simulator
 
 ## Description
-A personal project that simulates and displays a sentence with AI-style Typing Effect.
+A personal project that simulates and displays a sentence with AI-style Typing Effect. [Click Here](https://tlam-dev.github.io/typing-simulator/) to visit the GitHub Page.
 
 ## Features
 
