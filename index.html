@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-style Typing Effect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+   
+</head>
+<body>
+
+    <nav>
+        <button id="hamburger-menu">
+            <img src="assets/icons/list.svg" id="hamburger-icon" alt="Settings">
+        </button>
+    </nav>
+    <div class="hidden" id="menu">
+        <button id="repo-link" class="btn btn-outline-secondary">
+            <img src="assets/icons/github.svg" alt="GitHub" href="" target="_blank">
+        </button>
+         <button id="left-right-switch" class="btn btn-outline-secondary">
+             <img src="assets/icons/layout-sidebar-inset-reverse.svg" alt="Right">
+        </button>
+        <button id="toggle-theme" class="btn btn-outline-secondary">
+            <img src="assets/icons/circle-half.svg" alt="Theme">
+        </button>
+    </div>
+    <header>
+        <h1>Typing Effect</h1>
+    </header>
+
+    <div id="spinner" class="text-center my-3">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <div class="content-container">
+        <p id="typing-effect"></p>
+    </div>
+    <div class="controls" id="bottom-controls">
+        <div id="slider-container">
+            <input type="range" id="speed-slider" min="0" max="50" step="1" />
+        </div>
+        <div id="bottom-bar">
+            <button id="switch-content" class="btn btn-outline-secondary">
+                <img src="assets/icons/chat-left-text.svg" alt="Switch Content">
+            </button>
+            <input type="checkbox" id="pause-switch" hidden>
+            <label for="pause-switch" class="pause-button">
+                <img class="pause-icon" src="assets/icons/pause-circle.svg" alt="Pause">
+                <img class="play-icon" src="assets/icons/play-circle.svg" alt="Play">
+            </label>
+            <button id="reset-button">
+                <img src="assets/icons/arrow-clockwise.svg" alt="Reset">
+            </button>
+            
+        </div>
+    </div>
+    <footer>
+    </footer>
+</body>

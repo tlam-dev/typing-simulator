@@ -1,0 +1,8 @@
+**/.DS_Store
+
+notes.txt
+script.test.js
+node_modules
+jest.config.js
+package-lock.json
+package.json
