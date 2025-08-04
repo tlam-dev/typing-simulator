@@ -11,9 +11,10 @@
     --controls-z-index: 1000;
     --background-color-light: #f8f9fa;
     --background-color-dark: #1d1d1e;
-    --default-transition: all 0.5s ease;
+    --default-transition: 0.5s ease;
     --min-screen-width: 300px;
     --icon-gap: 8rem;
+    --menu-top: 2rem;
 }
 
 @media screen and (max-width: 800px) {
@@ -52,10 +53,20 @@
     transition: var(--default-transition);
 }
 
+#top-bar {
+    background: var(--background-color-light);
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    position: fixed;
+    transition: background var(--default-transition);
+}
+
 
 h1 {
-    top: 6rem;
-    padding: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
     margin-top: 3rem;
     text-align: center;
     font-size: var(--heading-font-size);
@@ -66,8 +77,9 @@ h1 {
 }
 
 #menu {
-    position: fixed;
+    position: absolute;
     right: 6rem;
+    top: var(--menu-top);
     flex-direction: row;
     gap: 1rem;
     z-index: var(--controls-z-index);
@@ -76,8 +88,9 @@ h1 {
 
 #hamburger-menu {
     justify-content: flex-end;
-    right: 2rem;
     position: absolute;
+    right: 2rem;
+    top: var(--menu-top);
     cursor: pointer;
     border: none;
     background: none;
@@ -96,18 +109,8 @@ h1 {
     padding-right: var(--space-from-side);
     padding-left: var(--space-from-side);
     padding-bottom: 30vh;
+    padding-top: 25vh;
     justify-content: center;
-}
-
-#code {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-#code img{
-    width: var(--icon-size-medium);
-    height: var(--icon-size-medium);
 }
 
 #toggle-theme {
@@ -143,22 +146,27 @@ h1 {
 
 #bottom-controls {
     position: fixed;
-    bottom: 20%;
+    bottom: 15%;
     left: 0;
     right: 0;
+    height: 5vh;
     display: flex;
     justify-content: space-between;
+    background-color: var(--background-color-light);
+    transition: var(--default-transition);
 }
 
 #bottom-bar {
-    position: absolute;
+    position: fixed;
     width: 110%;
     min-width: var(--min-screen-width);
-    height: 20vh;
+    height: 10vh;
     left: -5%;
+    bottom: 0;
     overflow: hidden;
     display: flex;
-    padding: 3rem;
+    padding: 2rem;
+    padding-bottom: 6rem;
     justify-content: center;
     gap: var(--icon-gap);
     background: var(--background-color-light);
@@ -179,16 +187,12 @@ h1 {
     height: var(--icon-size-big);
 }
 
-#slider-container {
-    background: blue;
-}
-
 #speed-slider {
     position: absolute;
     left: 30%;
     right: 30%;
-    bottom: var(--space-from-bottom);
-    position: absolute;
+    bottom: 18vh;
+    position: fixed;
     justify-content: center;
     z-index: var(--controls-z-index);
     transition: var(--default-transition);  
@@ -276,7 +280,13 @@ h1 {
         background: var(--background-color-dark);
         color: var(--text-color-light);
     }
+    #top-bar {
+        background: var(--background-color-dark);
+    }
     #bottom-bar {
+        background: var(--background-color-dark);
+    }
+    #bottom-controls {
         background: var(--background-color-dark);
     }
     img {
@@ -289,21 +299,4 @@ h1 {
         content: url("assets/icons/sun-fill.svg");
     }
 
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    bottom: 1%;
-    right: 0;
-    width: 100%;
-    padding: 1.5rem;
-    background-color: var(--secondary-color);
-    cursor: pointer;
-}
-
-footer img {
-    width: var(--icon-size-medium);
-    height: var(--icon-size-medium);
 }

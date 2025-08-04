@@ -10,28 +10,29 @@
    
 </head>
 <body>
-
-    <nav>
-        <button id="hamburger-menu">
-            <img src="assets/icons/list.svg" id="hamburger-icon" alt="Settings">
-        </button>
-    </nav>
-    <div class="hidden" id="menu">
-        <a id="repo" href="https://github.com/tlam-dev/typing-simulator" target="blank">
-            <button id="repo-link" class="btn btn-outline-secondary">
-                <img src="assets/icons/github.svg" alt="GitHub">
+    <div id="top-bar">
+        <nav>
+            <button id="hamburger-menu">
+                <img src="assets/icons/list.svg" id="hamburger-icon" alt="Settings">
             </button>
-        </a>
-         <button id="left-right-switch" class="btn btn-outline-secondary">
-             <img src="assets/icons/layout-sidebar-inset-reverse.svg" alt="Right">
-        </button>
-        <button id="toggle-theme" class="btn btn-outline-secondary">
-            <img src="assets/icons/circle-half.svg" alt="Theme">
-        </button>
+        </nav>
+        <div class="hidden" id="menu">
+            <a id="repo" href="https://github.com/tlam-dev/typing-simulator" target="blank">
+                <button id="repo-link" class="btn btn-outline-secondary">
+                    <img src="assets/icons/github.svg" alt="GitHub">
+                </button>
+            </a>
+            <button id="left-right-switch" class="btn btn-outline-secondary">
+                <img src="assets/icons/layout-sidebar-inset-reverse.svg" alt="Right">
+            </button>
+            <button id="toggle-theme" class="btn btn-outline-secondary">
+                <img src="assets/icons/circle-half.svg" alt="Theme">
+            </button>
+        </div>
+        <header>
+            <h1>Typing Effect</h1>
+        </header>
     </div>
-    <header>
-        <h1>Typing Effect</h1>
-    </header>
 
     <div id="spinner" class="text-center my-3">
         <div class="spinner-border text-primary" role="status">
@@ -57,7 +58,6 @@
             <button id="reset-button">
                 <img src="assets/icons/arrow-clockwise.svg" alt="Reset">
             </button>
-            
         </div>
     </div>
     <footer>
